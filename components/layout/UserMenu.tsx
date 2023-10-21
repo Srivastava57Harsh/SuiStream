@@ -18,25 +18,36 @@ const UserMenu = () => {
   // const address = useAddress();
   const address = useWallet()
 
+  const getAddress = () => {
+    // Check if the address is available in the context state
+    if (address.connected) {
+      return address.account?.address || ''; // Extract the address, or provide a default value
+    }
+
+    // Return an empty string if not connected
+    return '';
+  };
+
   const handleDisconnect = () => {
     disconnect();
     window.location.reload();
   };
+
   useEffect(() => {
     if (!address.connected) return;
-    console.log('connected wallet name: ', address.name)
-    console.log('account address: ', address.account?.address)
-    console.log('account publicKey: ', address.account?.publicKey)
-  }, [address.connected])
+    console.log('connected wallet name: ', address.name);
+    console.log('account address: ', address.account?.address);
+    console.log('account publicKey: ', address.account?.publicKey);
+  }, [address.connected]);
 
 
 
   return (
     <>
       {currentUser.hasProfile && (
-        <button disabled className="bg-violet-900 bg-opacity-50 text-violet-400">
-          <Copyable text={parseAddress(address)} copyText={address}/>
-        </button>
+         <button disabled className="bg-violet-900 bg-opacity-50 text-violet-400">
+         <Copyable text={parseAddress(getAddress())} copyText={getAddress()} />
+       </button>
       )}
       <Menu as="div" className="relative inline-block text-left">
         <Menu.Button className="bg-slate-700 flex relative gap-2 rounded-lg py-1 px-2 pl-3 ">

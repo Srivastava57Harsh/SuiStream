@@ -6,6 +6,7 @@ import useSuperstreamContract from "../../hooks/useSuperstreamContract";
 import { currentUserState } from "../../recoil/states";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { Props } from "next/script";
 
 const Layout = ({ children }: Props) => {
   const [currentUser, setCurrentUser] = useRecoilState(currentUserState);
