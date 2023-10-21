@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "helpers/mysten.jsx", "helpers/functions.jsx"  ],
   "exclude": [
     "node_modules"
   ]
