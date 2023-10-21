@@ -1,5 +1,5 @@
 import Avatar from "./Avatar";
-import { GiftIcon, HeartIcon, BadgeCheckIcon } from "@heroicons/react/outline";
+
 import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { currentUserState, Profile } from "../../recoil/states";
@@ -121,7 +121,7 @@ const ProfileInfo = ({ profileData }: Props) => {
             {profile?.subscribersCount.toString()} Subscribers{" "}
           </p>
         </div>
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           {!isOwner && (
             <button
               disabled={isFollowing}
@@ -136,9 +136,9 @@ const ProfileInfo = ({ profileData }: Props) => {
               )}
               {isFollowing ? "Following" : "Follow"}
             </button>
-          )}
+          )} */}
 
-          {!isOwner &&
+          {/* {!isOwner &&
             (isSubscribed ? (
               <button
                 onClick={handleUnsubscribe}
@@ -162,8 +162,8 @@ const ProfileInfo = ({ profileData }: Props) => {
           >
             <GiftIcon className="group-hover:scale-110 group-hover:rotate-12 duration-300 ease-out h-6 w-6" />
             Send Tip
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
       </div>
     </div>
   );

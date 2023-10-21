@@ -24,6 +24,7 @@ import CommentSection from "../components/video/CommentSection";
 import { STREAM_NFT_ADDRESS } from "../constants";
 import useSuperstreamContract from "../hooks/useSuperstreamContract";
 import { Profile } from "../recoil/states";
+import { BadgeCheckIcon } from "@heroicons/react/outline";
 
 type Props = {};
 
@@ -208,6 +209,8 @@ const video: NextPage = () => {
               // poster={currentVideo?.metadata?.image}
             />
           </div>
+          <div className="flex justify-between">
+            <div className="flex flex-col">
           <h1 className="text-2xl font-medium leading-relaxed">
             {currentVideo?.metadata?.name}
           </h1>
@@ -241,6 +244,37 @@ const video: NextPage = () => {
               View on BlueMove <ExternalLinkIcon className="h-5 w-5" />
             </a>
           </div>
+          </div>
+           <div className="flex gap-2 h-1/2">
+           
+          
+            <button
+         
+              className="text-lg bg-violet-600 hover:bg-violet-500 group  disabled:text-gray-400  disabled:bg-gray-800  gap-2"
+            >
+                <HeartIcon className="group-hover:scale-110 group-hover:rotate-12 duration-300 ease-out h-6 w-6" />
+               Following
+            </button>
+
+
+
+              <button
+              
+                className="text-lg flex bg-amber-500 hover:bg-yellow-500 group  disabled:text-gray-400  disabled:bg-gray-800  gap-2"
+              >
+                <BadgeCheckIcon className="group-hover:scale-110 group-hover:rotate-12 duration-300 ease-out h-6 w-6" />
+                Unsubscribe
+              </button>
+             
+          <button
+          
+            className="text-lg bg-emerald-500 hover:bg-emerald-400 group   gap-2"
+          >
+            <GiftIcon className="group-hover:scale-110 group-hover:rotate-12 duration-300 ease-out h-6 w-6" />
+            Send Tip
+          </button>
+        </div>
+        </div>
 
           <hr className="border-gray-600 my-4" />
 
