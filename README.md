@@ -64,7 +64,7 @@ Demo Video:
 loom.com/share/f6c77a0ec4a84b53a2a351425da690bb?sid=61e25b4f-5523-427e-9c86-ca0128576cea
 
 Live Website:
-fbdd-103-16-70-112.ngrok-fr
+https://suistream-dv8jhgki8-ankit7241.vercel.app
 
 # 📜 License
 
