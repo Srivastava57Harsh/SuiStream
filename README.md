@@ -52,16 +52,16 @@ The smart-contract has been deployed on Sui Dev-Net.
 # Check the below links for more details
 
 GitHub: 
-github.com/AmaanSayyad/SuiStream
+https://github.com/AmaanSayyad/SuiStream
 
 PPT:
-canva.com/design/DAFx2UKxWYg/IExQCl6lG1NdDztWH8JT6Q/edit?utm_content=DAFx2UKxWYg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://canva.com/design/DAFx2UKxWYg/IExQCl6lG1NdDztWH8JT6Q/edit?utm_content=DAFx2UKxWYg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Pitch Video:
-loom.com/share/070ca40eec614341b2793edd2822a0a5?sid=2d0a6f8c-038c-462d-8dc2-9c6467bab7eb
+https://loom.com/share/070ca40eec614341b2793edd2822a0a5?sid=2d0a6f8c-038c-462d-8dc2-9c6467bab7eb
 
 Demo Video:
-loom.com/share/f6c77a0ec4a84b53a2a351425da690bb?sid=61e25b4f-5523-427e-9c86-ca0128576cea
+https://loom.com/share/f6c77a0ec4a84b53a2a351425da690bb?sid=61e25b4f-5523-427e-9c86-ca0128576cea
 
 Live Website:
 https://suistream-dv8jhgki8-ankit7241.vercel.app
