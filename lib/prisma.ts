@@ -4,7 +4,16 @@ declare global {
   var prisma: PrismaClient | undefined;
 }
 
-const prisma = global.prisma || new PrismaClient();
+let prisma = null
+
+// const prisma = global.prisma || new PrismaClient();
+export async function getStaticProps() {
+  prisma = new PrismaClient()
+
+  return {
+    props : { }
+  }
+}
 
 if (process.env.NODE_ENV === "development") global.prisma = prisma;
 

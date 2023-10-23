@@ -2,7 +2,7 @@ import { authOptions } from "../../../lib/auth";
 import prisma from "../../../lib/prisma";
 import { deriveUserSalt } from "../../../lib/salt";
 import { jwtToAddress } from "@mysten/zklogin";
-import { getServerSession } from "next-auth/next";
+import  {getServerSession}  from "next-auth/next";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {

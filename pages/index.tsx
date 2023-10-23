@@ -48,16 +48,21 @@ const Home = () => {
   const streamNft = useNFTCollection(STREAM_NFT_ADDRESS);
   const [videos, setVideos] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>();
+  const [session,setSession] = useState()
+  const [address,setAddress] = useState()
 
 
     const fetchData = async () => {
     const session = await getServerSession(authOptions);
+    console.log(session)
+    setSession(session);
 
     // if the user is logged in, fetch their address
+    
     let address = null;
-    if (session !== null) {
-      const email = session?.user?.email as string;
-
+    if (session !== null && session.user) {
+      const email = session.user.email as string;
+  
       // get the user from the database
       const user = await prisma.user.findUnique({
         where: {
@@ -80,6 +85,7 @@ const Home = () => {
 
       // get the address from the id_token and salt
       address = jwtToAddress(id_token as string, salt);
+      setAddress(address)
     }
 
     // ... (the rest of your code that uses the address)
@@ -202,7 +208,7 @@ const Home = () => {
   return (
     <div className="">
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-        {session !== null && (
+      {session !== null && session && (
           <>
             <h1
               className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-4xl md:leading-[5rem]"
