@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import VideoCard from "../components/VideoCard";
 import { useNFTCollection } from "@thirdweb-dev/react";
 import { STREAM_NFT_ADDRESS } from "../constants";
-import { zkLogin } from "./callback";
+// import { zkLogin } from "./callback";
 import video from "./video";
 import Loading from "../components/Loading";
 import Spinner from "../components/Spinner";
@@ -48,55 +48,25 @@ const Home = () => {
   const streamNft = useNFTCollection(STREAM_NFT_ADDRESS);
   const [videos, setVideos] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>();
-  const [session,setSession] = useState()
-  const [address,setAddress] = useState()
-
-
-
-
-    const fetchData = async () => {
-    const session = await unstable_getServerSession(authOptions);
-    console.log(session)
-    setSession(session)
-
-    // if the user is logged in, fetch their address
-    
-    let address = null;
-    if (session !== null && session.user) {
-      const email = session.user.email as string;
-  
-      // get the user from the database
-      const user = await prisma.user.findUnique({
-        where: {
-          email,
-        },
-      });
-
-      // get the account from the database
-      const account = await prisma.account.findFirst({
-        where: {
-          userId: user?.id,
-        },
-      });
-
-      // get the id_token from the account
-      const id_token = account?.id_token;
-
-      // get the salt from the id_token
-      const salt = deriveUserSalt(id_token as string);
-
-      // get the address from the id_token and salt
-      address = jwtToAddress(id_token as string, salt);
-      setAddress(address)
-    }
-
-    // ... (the rest of your code that uses the address)
-
-    // Fetch videos
-    await getAllVideos();
-  };
-
+  const [session, setSession] = useState(null);
+  const [address, setAddress] = useState(null);
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/user');
+        const data = await response.json();
+
+        setSession(data.session);
+        setAddress(data.address);
+
+        // Fetch videos
+        await getAllVideos();
+      } catch (error) {
+        console.error(error);
+        // Handle errors...
+      }
+    };
+
     fetchData();
   }, []);
   
@@ -134,13 +104,13 @@ const Home = () => {
     getAllVideos();
   }, []);
 
-  useEffect(() => {
-    const asyncFunc = async () => {
-      // Call zkLogin here or perform other asynchronous tasks if needed
-      await zkLogin();
-    };
-    asyncFunc();
-  }, []);
+  // useEffect(() => {
+  //   const asyncFunc = async () => {
+  //     // Call zkLogin here or perform other asynchronous tasks if needed
+  //     await zkLogin();
+  //   };
+  //   asyncFunc();
+  // }, []);
 
   const content = [
     {

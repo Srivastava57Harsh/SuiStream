@@ -11,11 +11,11 @@ import UserDropdown from "../user-dropdown";
 import React, { useState } from "react";
 import { useAddress } from "@thirdweb-dev/react";
 import UserMenu from "./UserMenu";
-import ConnectMetamask from "./ConnectMetamask";
+// import ConnectSui from "./ConnectSui";
 import { useRecoilValue } from "recoil";
 import { currentUserState } from "../../recoil/states";
 import CreateProfile from "./CreateProfile";
-import ConnectSui from "./ConnectMetamask";
+
 
 // const Header = () => {
 //   const currentUserAddress = useAddress();
