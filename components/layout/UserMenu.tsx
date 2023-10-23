@@ -60,7 +60,7 @@ const UserMenu = () => {
           <div className="p-1 text-left flex flex-col min-w-fit gap-1">
             {currentUser.hasProfile && (
               <Menu.Item>
-                <Link href={`/u/7631`}>
+                <Link legacyBehavior href={`/u/7631`}>
                   <a className="px-4 py-1 whitespace-nowrap font-display hover:bg-slate-700 rounded-lg">
                     My Channel
                   </a>
@@ -69,7 +69,7 @@ const UserMenu = () => {
             )}
             {currentUser.hasProfile && (
               <Menu.Item>
-                <Link href={`/dashboard`}>
+                <Link legacyBehavior href={`/dashboard`}>
                   <a className="px-4 py-1 whitespace-nowrap font-display text-left hover:bg-slate-700 rounded-lg">
                     Dashboard
                   </a>

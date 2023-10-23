@@ -38,7 +38,7 @@ const FollowedUsers = (props: Props) => {
     <h6 className="font-bold pl-3 mb-2 uppercase  text-slate-500 font-display">FOLLOWED CHANNELS</h6>
     <div className="">
       {followedUsers?.map((item)=>(
-      <Link href={`/u/${item?.username}`} key={item?.id}>
+      <Link legacyBehavior href={`/u/${item?.username}`} key={item?.id}>
       <a className="flex font-bold font-display text-gray-400 hover:text-gray-100 pl-3 py-2 hover:bg-slate-800 items-center gap-3">
         <img className="h-8 rounded-md" src={`https://ipfs.io/ipfs/${item?.pfp}`} alt="" />
         {item.username}

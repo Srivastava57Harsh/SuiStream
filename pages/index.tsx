@@ -15,7 +15,7 @@ import prisma from "../lib/prisma";
 import { deriveUserSalt } from "../lib/salt";
 import { nFormatter } from "../lib/utils";
 import { jwtToAddress } from "@mysten/zklogin";
-import { getServerSession } from "next-auth/next";
+import { unstable_getServerSession } from "next-auth/next";
 
 const GameIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
@@ -52,10 +52,12 @@ const Home = () => {
   const [address,setAddress] = useState()
 
 
+
+
     const fetchData = async () => {
-    const session = await getServerSession(authOptions);
+    const session = await unstable_getServerSession(authOptions);
     console.log(session)
-    setSession(session);
+    setSession(session)
 
     // if the user is logged in, fetch their address
     
