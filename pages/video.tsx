@@ -125,11 +125,11 @@ const video: NextPage = () => {
         id: 1,
         creator: "Sui Network",
         owner: "Sui Network",
-        created_at: 1629780000,
+        created_at: 1697830690,
         animation_url: "./videos/technology.mp4",
         properties: {
           category: "Technology",
-          tags: ["Technology", "Blockchain"],
+          tags: ["Blockchain"],
         },
       },
     };
@@ -139,7 +139,7 @@ const video: NextPage = () => {
         metadata: {
           image: "./thumbnail/gaming.jpg",
           name: "Fortnite Live Stream",
-          description: "Fortnite Live Stream",
+          description: "Fortnite's Halloween Update is CRAZY!",
           id: 2,
           creator: "Ninja",
           owner: "Ninja",
@@ -147,7 +147,7 @@ const video: NextPage = () => {
           animation_url: "./videos/gaming.mp4",
           properties: {
             category: "Gaming",
-            tags: ["Gaming", "Fortnite"],
+            tags: ["Fortnite"],
           },
         },
       };
@@ -166,7 +166,7 @@ const video: NextPage = () => {
           animation_url: "./videos/entertainment.mp4",
           properties: {
             category: "Entertainment",
-            tags: ["Entertainment", "Charity", "Games"],
+            tags: ["Charity", "Games"],
           },
         },
       };
@@ -177,7 +177,7 @@ const video: NextPage = () => {
         metadata: {
           image: "./thumbnail/music.jpg",
           name: "Girls Like You",
-          description: "Music video - girls like you ",
+          description: "Maroon 5 - Girls Like You ft. Cardi B (Volume 2) (Official Music Video)",
           id: 4,
           creator: "Maroon 5",
           owner: "Maroon 5",
@@ -185,7 +185,7 @@ const video: NextPage = () => {
           animation_url: "./videos/music.mp4",
           properties: {
             category: "Music",
-            tags: ["Music"],
+            tags: ["Spotify"],
           },
         },
       };
@@ -196,7 +196,7 @@ const video: NextPage = () => {
         metadata: {
           image: "./thumbnail/technology2.jpg",
           name: "Builder House Seoul",
-          description: "Stream - Builder House Seoul",
+          description: "Sui Mainnet Update with Adeniyi Abiodun - Sui Builder House Seoul",
           id: 5,
           creator: "Sui Network",
           owner: "Sui Network",
@@ -204,7 +204,7 @@ const video: NextPage = () => {
           animation_url: "./videos/builderhouseseoul.mp4",
           properties: {
             category: "Technology",
-            tags: ["Technology", "Blockchain"],
+            tags: ["Blockchain"],
           },
         },
       };
@@ -222,8 +222,8 @@ const video: NextPage = () => {
           created_at: 1697830690,
           animation_url: "./videos/unfold2023.mp4",
           properties: {
-            category: "Technology",
-            tags: ["Technology", "Blockchain"],
+            category: "Entertainment",
+            tags: ["Blockchain"],
           },
         },
       };
@@ -233,16 +233,16 @@ const video: NextPage = () => {
       currentVideo = {
         metadata: {
           image: "./thumbnail/gaming2.jpg",
-          name: "Fortnite Late Night Stream",
-          description: "Fortnite Late Night Stream",
+          name: "Fortnite Montage",
+          description: "A Fortnite Montage But All The Songs are 8D Audio...",
           id: 7,
           creator: "Macbeth",
           owner: "Macbeth",
           created_at: 1697830690,
           animation_url: "./videos/fortnitestream.mp4",
           properties: {
-            category: "Technology",
-            tags: ["Technology", "Blockchain"],
+            category: "Gaming",
+            tags: ["Fortnite"],
           },
         },
       };

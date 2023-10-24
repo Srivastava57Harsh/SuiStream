@@ -123,7 +123,7 @@ const Home = () => {
       title: "Intro to Sui Network and Move",
       thumbnail: "./thumbnail/technology.jpg",
       category: "Technology",
-      createdAt: 1629780000,
+      createdAt: 1697830690,
       creator: "Sui Network",
       pfp: "./pfp/1.jpg",
     },
@@ -179,7 +179,7 @@ const Home = () => {
       category: "Technology",
       createdAt: 1697837600,
       creator: "Macbeth",
-      pfp: "./pfp5.jpg",
+      pfp: "./pfp/5.jpg",
     },
   ];
   return (
