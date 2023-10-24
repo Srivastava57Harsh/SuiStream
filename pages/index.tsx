@@ -179,8 +179,9 @@ const Home = () => {
   ];
   return (
     <div className="">
+      {console.log(session)}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-      {session !== null && session && (
+      {session !== null && (
           <>
             <h1
               className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-4xl md:leading-[5rem]"

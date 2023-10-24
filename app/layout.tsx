@@ -7,12 +7,12 @@ import "./globals.css";
 // import Footer from "@/components/layout/footer";
 
 export const metadata = {
-  title: "Scale3 zkLogin - Authentication for your next project on Sui",
+  title: "Sui Stream",
   description:
-    "Scale3 zkLogin is the all-in-one solution for your next project on Sui. It includes a design system, authentication, analytics, and more.",
+    "First decentralized youtube on Sui",
   twitter: {
     card: "summary_large_image",
-    title: "Scale3 zkLogin - Authentication for your next project on Sui",
+    title: "Sui Stream - Authentication for your next project on Sui",
     description:
       "Scale3 zkLogin is the all-in-one solution for your next project on Sui. It includes a design system, authentication, analytics, and more.",
     creator: "@scale3labs",

@@ -1,6 +1,6 @@
 import prisma from "../lib/prisma";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { unstable_getServerSession, type NextAuthOptions } from "next-auth";
+import { getServerSession, type NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
@@ -22,7 +22,7 @@ export const authOptions: NextAuthOptions = {
 };
 
 export function getSession() {
-  return unstable_getServerSession(authOptions) as Promise<{
+  return getServerSession(authOptions) as Promise<{
     user: {
       id: string;
       name: string;

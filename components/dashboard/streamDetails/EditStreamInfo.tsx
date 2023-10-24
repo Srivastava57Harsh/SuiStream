@@ -27,8 +27,10 @@ const EditStreamInfo = (props: Props) => {
     try{
       toast("Saving changes");
       // get thumbnail Cid
+      //@ts-ignore
       const thumbnailUri =await storeFile(filePickerRef.current.files[0],props.web3storageToken); 
       toast.success("Thumbnail Uploaded to Ipfs.")
+      //@ts-ignore
       const saveTxn = await setStreamInfo(title,thumbnailUri); 
       toast.success("Changes Saved");
       window.location.reload();
@@ -40,6 +42,7 @@ const EditStreamInfo = (props: Props) => {
   };
 
   const handleFileChange = () => {
+    //@ts-ignore
     const file = filePickerRef.current.files[0];
     // Limit to either image/jpeg, image/jpg or image/png file
     const fileTypes = ["image/jpeg", "image/jpg", "image/png"];
@@ -61,6 +64,7 @@ const EditStreamInfo = (props: Props) => {
     }
 
     reader.onload = (readerEvent) => {
+      //@ts-ignore
       setSelectedFile(readerEvent.target.result.toString());
     };
   };
@@ -83,6 +87,7 @@ const EditStreamInfo = (props: Props) => {
           />
           {!selectedFile && (
             <button
+            //@ts-ignore
               onClick={() => filePickerRef.current.click()}
               className="bg-slate-700 px-4 py-2 text-slate-300 hover:text-slate-100 hover:bg-slate-600 rounded-full"
             >
@@ -97,7 +102,9 @@ const EditStreamInfo = (props: Props) => {
               className="h-full w-full "
             />
           )}
+
           {selectedFile && (
+            //@ts-ignore
             <button onClick={()=>setSelectedFile(null)} className="absolute bg-red-500 text-white text-xs right-2 top-2 px-2">Reset</button>
           )}
         </div>

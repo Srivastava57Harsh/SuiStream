@@ -10,7 +10,7 @@ import { useSignInModal } from "../sign-in-modal";
 import UserDropdown from "../user-dropdown";
 import React, { useState } from "react";
 import { useAddress } from "@thirdweb-dev/react";
-import UserMenu from "./UserMenu";
+// import UserMenu from "./UserMenu";
 // import ConnectSui from "./ConnectSui";
 import { useRecoilValue } from "recoil";
 import { currentUserState } from "../../recoil/states";
