@@ -28,9 +28,9 @@ In the realm of traditional social media platforms, issues stemming from central
 - **zkLogin:** Enhanced security and user-friendly authentication for your privacy.
 - **Community Building:** Join vibrant communities and engage with like-minded individuals.
 - **SUI NFT Marketplace:** Buy, sell, and create NFTs right within the platform.
-- **SUI Token Donation:** Donate Sui Tokens to your faviourite content creators..
+- **SUI Token Donation:** Donate Sui Tokens to your favourite content creators..
 
-The smart-contract has been deployed on Sui Dev-Net.
+The smart contract has been deployed on Sui Dev-Net.
 # 💻 Tech Stack
 
 - Next.js
@@ -42,8 +42,14 @@ The smart-contract has been deployed on Sui Dev-Net.
 
 # ⏭️ What's next
 
-- Extending this system to more sophististicated systems.
-- Features like Superchat to increase the token flow on Sui Network.
+Our journey continues as we strive to enhance Sui Stream and the SUI Blockchain ecosystem. Here's what's on the horizon:
+- Mobile App: We're working on a dedicated mobile app to provide a seamless and user-friendly experience on your devices.
+- Enhanced NFT Marketplace: Expect a feature-rich NFT marketplace within Sui Stream, allowing creators and collectors to flourish.
+- Deeper Integration: We'll integrate with more blockchain networks to expand our reach and accessibility.
+- Community Growth: We aim to expand our communities and forums, creating spaces for diverse discussions and connections.
+- Advanced Monetization: Stay tuned for innovative monetization features that empower content creators further.
+- Improved Security: We'll continue to bolster security measures to protect user data and content.
+- User Feedback: Your feedback is invaluable. We'll keep listening and implementing improvements based on your suggestions.
 
 #   Challenges we ran into
 
@@ -64,10 +70,10 @@ Demo Video:
 https://loom.com/share/f6c77a0ec4a84b53a2a351425da690bb?sid=61e25b4f-5523-427e-9c86-ca0128576cea
 
 Live Website:
-https://suistream-dv8jhgki8-ankit7241.vercel.app
+Run using local.
 
 # 📜 License
 
 `Sui Stream` is available under the MIT license. See the [`LICENSE`](https://opensource.org/license/mit/) file for more info.
 
-Join us in shaping the future of social media with decentralization, security, and user empowerment. Get started!
+Join us on this exciting journey of decentralization, privacy, and empowerment. Together, we'll shape the future of social media on the SUI Blockchain! ⚡🚀
