@@ -8,7 +8,7 @@ import { Google } from "../components/icons";
 import Scale3 from "../icons/scale3.svg";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAddress } from "@thirdweb-dev/react";
 // import UserMenu from "./UserMenu";
 // import ConnectSui from "./ConnectSui";
@@ -58,9 +58,35 @@ import CreateProfile from "../components/layout/CreateProfile";
 
 // export default Header;
 
-export default function Header({ session }: { session: Session | null }) {
+// export default function Header({ session }: { session: Session | null }) {
+  export default function Header() {
   const { SignInModal, setShowSignInModal } = useSignInModal();
   const scrolled = useScroll(50);
+
+  const [session, setSession] = useState(null);
+
+  const [address, setAddress] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/user');
+        
+        const data = await response.json();
+
+        console.log("Data : ",data)
+
+        setSession(data.session);
+        setAddress(data.address);
+
+        // Fetch videos
+      } catch (error) {
+        console.error(error);
+        // Handle errors...
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -81,7 +107,7 @@ export default function Header({ session }: { session: Session | null }) {
               <UserDropdown session={session} />
             ) : (
               <button
-                className="flex gap-2 items-center rounded-full border border-gray-300 p-1.5 px-4 text-sm transition-all bg-gradient-to-tr from-blue-400 via-white to-purple-400 background-animate"
+                className="flex gap-2 items-center rounded-full border border-gray-300 p-1.5 px-4 text-sm"
                 onClick={() => setShowSignInModal(true)}
               >
                 <Google className="h-1 w-1" />

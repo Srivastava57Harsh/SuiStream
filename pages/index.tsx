@@ -50,11 +50,8 @@ const Home = () => {
   const [videos, setVideos] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>();
   const [session, setSession] = useState(null);
-  const sessionRef = useRef(session);
-	sessionRef.current = session;
+
   const [address, setAddress] = useState(null);
-  const addressRef = useRef(address);
-	addressRef.current = address;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -188,7 +185,7 @@ const Home = () => {
   return (
     <div className="">
      
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      <div className="z-20 w-full max-w-xl px-5 xl:px-0">
       {session != null && (
           <>
             <h1

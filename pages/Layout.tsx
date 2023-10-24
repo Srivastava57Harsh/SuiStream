@@ -66,7 +66,8 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="flex flex-col min-h-screen">
       {console.log("SESSION IN LAYOUT : ",session)}
-      <Header session={session} />
+      {/* <Header session={session} /> */}
+      <Header />
       <div className="w-full flex flex-1">
         <Sidebar />
         <div className="p-4 pl-64 flex-1 max-w-screen-2xl h-full mx-auto">{children}</div>
