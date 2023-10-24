@@ -1,15 +1,15 @@
-// import React from "react";
-// import {ConnectButton} from '@suiet/wallet-kit';
+import React from "react";
+import {ConnectButton} from '@suiet/wallet-kit';
 
-// type Props = {};
+type Props = {};
 
-// const ConnectSui = (props: Props) => {
+const ConnectSui = (props: Props) => {
 
-//   return (
+  return (
 
-//     <ConnectButton />
+    <ConnectButton />
 
-//   );
-// };
+  );
+};
 
-// export default ConnectSui;
+export default ConnectSui;

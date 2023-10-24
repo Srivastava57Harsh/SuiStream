@@ -4,12 +4,12 @@ import Layout from "../pages/Layout";
 import { Toaster } from "react-hot-toast";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import { RecoilRoot } from "recoil";
-// import {WalletProvider} from '@suiet/wallet-kit';
+import {WalletProvider} from '@suiet/wallet-kit';
 import '@suiet/wallet-kit/style.css';
 
 function MyApp({ Component, pageProps, web3storageToken }) {
   return (
-    
+    <WalletProvider>
     <ThirdwebProvider desiredChainId={ChainId.Mumbai}>
       <RecoilRoot>
         <Layout>
@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps, web3storageToken }) {
         </Layout>
       </RecoilRoot>
     </ThirdwebProvider>
+    </WalletProvider>
   );
 }
 

@@ -65,7 +65,6 @@ const Layout = ({ children }: Props) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {console.log("SESSION IN LAYOUT : ",session)}
       {/* <Header session={session} /> */}
       <Header />
       <div className="w-full flex flex-1">
