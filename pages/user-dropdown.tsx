@@ -1,6 +1,6 @@
 "use client";
 
-import Popover from "../components/popover";
+import Popover from "./popover";
 import { LogOut } from "lucide-react";
 import { Session } from "next-auth";
 import { signOut } from "next-auth/react";

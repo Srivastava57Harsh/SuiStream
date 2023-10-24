@@ -1,4 +1,4 @@
-import Nav from "../components/nav";
+import Nav from "../pages/nav";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { Suspense } from "react";
