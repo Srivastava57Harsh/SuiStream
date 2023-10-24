@@ -57,6 +57,8 @@ Our journey continues as we strive to enhance Sui Stream and the SUI Blockchain 
 
 # Check the below links for more details
 
+Testnet Deployed Contract Address: https://suiexplorer.com/object/0x867781f9c2fd17dba3b8e8a74bcfdd42dcaff0e74b91f6810b9de910491c364c?module=superstream&network=testnet
+
 GitHub: 
 https://github.com/AmaanSayyad/SuiStream
 
