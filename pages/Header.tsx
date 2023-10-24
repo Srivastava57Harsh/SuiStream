@@ -86,7 +86,7 @@ const Header = () => {
                 onClick={() => setShowSignInModal(true)}
               >
                 <Google className="h-1 w-1" />
-                Get Started
+                ZK Login
               </button>
             )}
           </div>
