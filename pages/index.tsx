@@ -1,6 +1,6 @@
 import { ChipIcon, FilmIcon, MusicNoteIcon } from "@heroicons/react/outline";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import VideoCard from "../components/VideoCard";
 import { useNFTCollection } from "@thirdweb-dev/react";
 import { STREAM_NFT_ADDRESS } from "../constants";
@@ -16,6 +16,7 @@ import { deriveUserSalt } from "../lib/salt";
 import { nFormatter } from "../lib/utils";
 import { jwtToAddress } from "@mysten/zklogin";
 import { getServerSession } from "next-auth/next";
+import Header from "./Header";
 
 const GameIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
@@ -49,7 +50,11 @@ const Home = () => {
   const [videos, setVideos] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>();
   const [session, setSession] = useState(null);
+  const sessionRef = useRef(session);
+	sessionRef.current = session;
   const [address, setAddress] = useState(null);
+  const addressRef = useRef(address);
+	addressRef.current = address;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -182,19 +187,19 @@ const Home = () => {
   ];
   return (
     <div className="">
-      {console.log("Session in index.js : ",session)}
-      <div className="z-10 w-full  max-w-xl px-5 xl:px-0">
-      {session !== null && (
+     
+      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      {session != null && (
           <>
             <h1
-              className="h-full animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-4xl md:leading-[5rem]"
-              style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
+              className="text-white text-center"
+             
             >
               {`Welcome back, ${session?.user?.name}`}
             </h1>
             <div className="border-[1px] border-slate-300 rounded-lg px-3 py-4 flex flex-col gap-2 w-full">
               <p
-                className="animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-lg"
+                className=" text-center text-white"
                 style={{
                   animationDelay: "0.25s",
                   animationFillMode: "forwards",
@@ -203,7 +208,7 @@ const Home = () => {
                 Your Sui address is:
               </p>
               <p
-                className="font-mono text-sm text-gray-700 animate-fade-up text-center opacity-0 [text-wrap:balance]"
+                className="text-white text-center"
                 style={{
                   animationDelay: "0.25s",
                   animationFillMode: "forwards",

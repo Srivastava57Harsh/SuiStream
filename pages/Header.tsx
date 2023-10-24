@@ -1,20 +1,20 @@
 "use client";
 
-import useScroll from "../../lib/hooks/use-scroll";
+import useScroll from "../lib/hooks/use-scroll";
 import { Session } from "next-auth";
 import Image from "next/image";
 import Link from "next/link";
-import { Google } from "../icons";
+import { Google } from "../components/icons";
 import Scale3 from "../icons/scale3.svg";
-import { useSignInModal } from "../sign-in-modal";
-import UserDropdown from "../user-dropdown";
+import { useSignInModal } from "./sign-in-modal";
+import UserDropdown from "./user-dropdown";
 import React, { useState } from "react";
 import { useAddress } from "@thirdweb-dev/react";
 // import UserMenu from "./UserMenu";
 // import ConnectSui from "./ConnectSui";
 import { useRecoilValue } from "recoil";
-import { currentUserState } from "../../recoil/states";
-import CreateProfile from "./CreateProfile";
+import { currentUserState } from "../recoil/states";
+import CreateProfile from "../components/layout/CreateProfile";
 
 
 // const Header = () => {
