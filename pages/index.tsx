@@ -132,16 +132,16 @@ const Home = () => {
       category: "Gaming",
       createdAt: 1697637690,
       creator: "Ninja",
-      pfp: "./pfp/2.jpg",
+      pfp: "./pfp/4.jpg",
     },
     {
       id: 3,
-      title: "Charity Football Stream",
+      title: "Fight for $250,000!",
       thumbnail: "./thumbnail/entertainment.jpg",
       category: "Entertainment",
       createdAt: 1697830690,
       creator: "Mr. Beast",
-      pfp: "./pfp/3.jpg",
+      pfp: "./pfp/2.jpg",
     },
     {
       id: 4,
@@ -150,7 +150,7 @@ const Home = () => {
       category: "Music",
       createdAt: 1697837690,
       creator: "Maroon 5",
-      pfp: "./pfp/4.jpg",
+      pfp: "./pfp/3.jpg",
     },
     {
       id: 5,
@@ -159,7 +159,7 @@ const Home = () => {
       category: "Technology",
       createdAt: 1697837600,
       creator: "Builder House",
-      pfp: "./pfp/5.jpg",
+      pfp: "./pfp/1.jpg",
     },
     {
       id: 6,
@@ -172,12 +172,12 @@ const Home = () => {
     },
     {
       id: 7,
-      title: "Fortnite Laate Night Stream",
+      title: "Fortnite Late Night Stream",
       thumbnail: "./thumbnail/gaming2.jpg",
       category: "Technology",
       createdAt: 1697837600,
       creator: "Macbeth",
-      pfp: "./pfp/2.jpg",
+      pfp: "./pfp5.jpg",
     },
   ];
   return (

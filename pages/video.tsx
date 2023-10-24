@@ -157,8 +157,8 @@ const video: NextPage = () => {
       currentVideo = {
         metadata: {
           image: "./thumbnail/entertainment.jpg",
-          name: "Charity Football Stream",
-          description: "Charity Football Stream",
+          name: "Fight for $250,000!",
+          description: "Every Country on Earth Fights for $250,000!",
           id: 3,
           creator: "Mr. Beast",
           owner: "Mr. Beast",
@@ -166,7 +166,7 @@ const video: NextPage = () => {
           animation_url: "./videos/entertainment.mp4",
           properties: {
             category: "Entertainment",
-            tags: ["Entertainment", "Charity", "Football"],
+            tags: ["Entertainment", "Charity", "Games"],
           },
         },
       };
@@ -186,6 +186,63 @@ const video: NextPage = () => {
           properties: {
             category: "Music",
             tags: ["Music"],
+          },
+        },
+      };
+    }
+
+    if (id === "5") {
+      currentVideo = {
+        metadata: {
+          image: "./thumbnail/technology2.jpg",
+          name: "Builder House Seoul",
+          description: "Stream - Builder House Seoul",
+          id: 5,
+          creator: "Sui Network",
+          owner: "Sui Network",
+          created_at: 1697830690,
+          animation_url: "./videos/builderhouseseoul.mp4",
+          properties: {
+            category: "Technology",
+            tags: ["Technology", "Blockchain"],
+          },
+        },
+      };
+    }
+
+    if (id === "6") {
+      currentVideo = {
+        metadata: {
+          image: "./thumbnail/technology3.jpg",
+          name: "Unfold 2023",
+          description: "Stream - Unfold 2023",
+          id: 6,
+          creator: "Sui Network",
+          owner: "Sui Network",
+          created_at: 1697830690,
+          animation_url: "./videos/unfold2023.mp4",
+          properties: {
+            category: "Technology",
+            tags: ["Technology", "Blockchain"],
+          },
+        },
+      };
+    }
+
+    if (id === "7") {
+      currentVideo = {
+        metadata: {
+          image: "./thumbnail/gaming2.jpg",
+          name: "Fortnite Late Night Stream",
+          description: "Fortnite Late Night Stream",
+          id: 7,
+          creator: "Macbeth",
+          owner: "Macbeth",
+          created_at: 1697830690,
+          animation_url: "./videos/fortnitestream.mp4",
+          properties: {
+            category: "Technology",
+            tags: ["Technology", "Blockchain"],
           },
         },
       };
