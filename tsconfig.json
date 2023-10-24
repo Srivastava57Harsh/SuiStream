@@ -38,7 +38,7 @@
     "helpers/functions.jsx",
     ".next/types/**/*.ts",
     "app/api/auth/[...nextauth]/route.ts.bk"
-, "pages/api/user.js" ],
+, "pages/api/user.tsx" ],
   "exclude": [
     "node_modules"
   ]

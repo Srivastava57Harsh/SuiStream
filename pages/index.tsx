@@ -15,7 +15,7 @@ import prisma from "../lib/prisma";
 import { deriveUserSalt } from "../lib/salt";
 import { nFormatter } from "../lib/utils";
 import { jwtToAddress } from "@mysten/zklogin";
-import { unstable_getServerSession } from "next-auth/next";
+import { getServerSession } from "next-auth/next";
 
 const GameIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512 512">
@@ -54,7 +54,10 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await fetch('/api/user');
+        
         const data = await response.json();
+
+        console.log("Data : ",data)
 
         setSession(data.session);
         setAddress(data.address);
@@ -179,12 +182,12 @@ const Home = () => {
   ];
   return (
     <div className="">
-      {console.log(session)}
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      {console.log("Session in index.js : ",session)}
+      <div className="z-10 w-full  max-w-xl px-5 xl:px-0">
       {session !== null && (
           <>
             <h1
-              className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-4xl md:leading-[5rem]"
+              className="h-full animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-4xl md:leading-[5rem]"
               style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
             >
               {`Welcome back, ${session?.user?.name}`}

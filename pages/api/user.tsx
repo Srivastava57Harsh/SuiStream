@@ -1,14 +1,24 @@
-// pages/api/user.js
+// pages/api/user.tsx
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../lib/auth";
 import prisma from "../../lib/prisma";
 import { deriveUserSalt } from "../../lib/salt";
-// @ts-ignore
 import { jwtToAddress } from "@mysten/zklogin";
+import { NextRequest, NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler(req, res) {
+export default async function handler(req:any, res:any) {
 	try {
-		const session = await getServerSession(authOptions, req, res);
+		const session = await getServerSession(
+      req as unknown as NextApiRequest,
+      {
+        ...res,
+        getHeader: (name: string) => res.headers?.get(name),
+        setHeader: (name: string, value: string) => res.headers?.set(name, value),
+      } as unknown as NextApiResponse,
+      authOptions
+    );
+		console.log(session);
 
 		let address = null;
 		if (session !== null && session.user) {
@@ -38,9 +48,14 @@ export default async function handler(req, res) {
 			address = jwtToAddress(id_token, salt);
 		}
 
+		console.log("SEssion : ",session)
+		
+		
 		res.status(200).json({ session, address });
+	
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ error: "Internal Server Error" });
+		console.error("Error in API/user:", error);
+		res.status(500).json({ error: "Internal Server Error", details: error.message });
+	
 	}
 }
